@@ -40,10 +40,8 @@ for %%a in (*) do (
 
 :breakFindFile
 
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SourceCodeControlProvider" /v "ProviderRegKey" /d "Software\Microsoft\SourceSafe" /f
-start "" "%fileName%"
-timeout 5
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\SourceCodeControlProvider" /v "ProviderRegKey" /d "SOFTWARE\Microsoft\Team Foundation Server MSSCCI Provider" /f
+start "" "%fileName%"
 
 :eof
 
